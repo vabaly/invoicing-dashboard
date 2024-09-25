@@ -4,6 +4,7 @@ import fetchData from '~/business/fetch';
 import i18n from '~/i18n';
 import { InvoiceDetail } from '../_components/invoice';
 import { Chase } from '../_components/chase';
+import { HydrateClient } from '~/trpc/server';
 
 export default async function InvoicePage({
   params: { invoice: invoiceNumber },
@@ -26,14 +27,16 @@ export default async function InvoicePage({
   }
 
   return (
-    <div className="flex h-[calc(100vh-100px)] flex-col items-start space-y-4 pb-16">
-      <Button startIcon={<ArrowBackIcon />} color="inherit" aria-label="back">
-        {i18n.t('back')}
-      </Button>
-      <Card className="w-full flex-1 p-4">
-        <InvoiceDetail invoice={invoice} />
-      </Card>
-      <Chase invoice={invoice} />
-    </div>
+    <HydrateClient>
+      <div className="flex h-[calc(100vh-100px)] flex-col items-start space-y-4 pb-16">
+        <Button startIcon={<ArrowBackIcon />} color="inherit" aria-label="back">
+          {i18n.t('back')}
+        </Button>
+        <Card className="w-full flex-1 p-4">
+          <InvoiceDetail invoice={invoice} />
+        </Card>
+        <Chase invoice={invoice} />
+      </div>
+    </HydrateClient>
   );
 }
