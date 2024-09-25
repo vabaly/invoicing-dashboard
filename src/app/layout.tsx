@@ -4,7 +4,9 @@ import { GeistSans } from 'geist/font/sans';
 import { type Metadata } from 'next';
 
 import { TRPCReactProvider } from '~/trpc/react';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import i18n from '~/i18n';
+import { Header } from './_components/header';
 
 export const metadata: Metadata = {
   title: i18n.t('siteInfo.title'),
@@ -18,7 +20,12 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${GeistSans.variable}`}>
       <body>
-        <TRPCReactProvider>{children}</TRPCReactProvider>
+        <TRPCReactProvider>
+          <AppRouterCacheProvider>
+            <Header />
+            {children}
+          </AppRouterCacheProvider>
+        </TRPCReactProvider>
       </body>
     </html>
   );
