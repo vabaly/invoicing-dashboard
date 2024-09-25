@@ -23,7 +23,7 @@ export default function RootLayout({
         <TRPCReactProvider>
           <AppRouterCacheProvider>
             <Header />
-            {children}
+            <main className="p-4 pt-16">{children}</main>
           </AppRouterCacheProvider>
         </TRPCReactProvider>
       </body>
