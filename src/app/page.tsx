@@ -6,7 +6,13 @@ import { api, HydrateClient } from '~/trpc/server';
 export default async function Home() {
   const hello = await api.post.hello({ text: 'from tRPC' });
 
+  const invoices = await api.invoice.getList();
+  const clients = await api.client.getList();
+
   void api.post.getLatest.prefetch();
+
+  console.log('invoices', invoices);
+  console.log('clients', clients);
 
   return (
     <HydrateClient>
