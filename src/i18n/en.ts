@@ -15,6 +15,41 @@ const en = {
     dueDate: 'Due Date',
     status: 'Status',
   },
+
+  invoiceDetail: {
+    basicInfo: 'Basic Info',
+    clientInfo: 'Client Info',
+    lineItems: 'Line Items',
+
+    email: 'Email',
+    address: 'Address',
+    clientId: 'Client ID',
+  },
+
+  lineItem: {
+    description: 'Description',
+    price: 'Price',
+    quantity: 'Quantity',
+  },
+
+  back: 'Back',
+  ok: 'Ok',
+  colon: ': ',
+
+  chase: 'Chase',
+
+  email: {
+    title: 'Email preview',
+    to: 'To',
+    subject: 'Subject',
+    subjectValue: 'Please check your invoice',
+    bodies: {
+      0: 'Dear %{name},',
+      1: 'This is your invoice details. Please check it.',
+      2: 'Best regards,',
+      3: 'Attelas Team',
+    },
+  },
 };
 
 export default en;

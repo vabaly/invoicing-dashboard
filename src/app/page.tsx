@@ -1,12 +1,9 @@
 import { api, HydrateClient } from '~/trpc/server';
 import { InvoiceList } from './_components/invoice-list';
-import { processInvoices } from '~/business/data';
+import fetchData from '~/business/fetch';
 
 export default async function Home() {
-  const invoices = await api.invoice.getList();
-  const clients = await api.client.getList();
-
-  const invoicesWithClient = processInvoices(invoices, clients);
+  const { invoices, clients } = await fetchData();
 
   void api.post.getLatest.prefetch();
 
@@ -15,7 +12,7 @@ export default async function Home() {
 
   return (
     <HydrateClient>
-      <InvoiceList invoices={invoicesWithClient} />
+      <InvoiceList invoices={invoices} />
     </HydrateClient>
   );
 }

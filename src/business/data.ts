@@ -1,8 +1,8 @@
 import { type Client } from '~/server/api/routers/client';
 import { type Invoice } from '~/server/api/routers/invoice';
 
-export interface InvoiceWithClientName extends Invoice {
-  clientName: string;
+export interface InvoiceWithClient extends Invoice {
+  client?: Client;
   total: number;
 }
 
@@ -17,7 +17,7 @@ export interface InvoiceWithClientName extends Invoice {
 export function processInvoices(
   invoices: Invoice[],
   clients: Client[],
-): InvoiceWithClientName[] {
+): InvoiceWithClient[] {
   const processedInvoices = invoices.map((invoice) => {
     // Find the client associated with the current invoice
     const client = clients.find(
@@ -31,7 +31,7 @@ export function processInvoices(
     // Return a new object containing the original invoice information, the client's name, and the total amount
     return {
       ...invoice,
-      clientName: client?.name ?? 'Unknown',
+      client,
       total,
     };
   });

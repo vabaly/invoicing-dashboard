@@ -7,7 +7,7 @@ import {
   TableHead,
   TableRow,
 } from '@mui/material';
-import { type InvoiceWithClientName } from '~/business';
+import { type InvoiceWithClient } from '~/business';
 import i18n from '~/i18n';
 import './invoice-list.css';
 import { useRouter } from 'next/navigation';
@@ -16,7 +16,7 @@ import { debounce } from 'lodash';
 import { DEBOUNCE_PARAMS } from '~/constants';
 
 interface InvoiceListProps {
-  invoices: InvoiceWithClientName[];
+  invoices: InvoiceWithClient[];
 }
 
 // This function receives invoices as props and returns a table
@@ -71,7 +71,9 @@ export function InvoiceList({ invoices }: InvoiceListProps) {
             <TableCell component="th" scope="row">
               {invoice.invoiceNumber}
             </TableCell>
-            <TableCell align="right">{invoice.clientId}</TableCell>
+            <TableCell align="right">
+              {invoice.client?.name ?? 'Unknown'}
+            </TableCell>
             <TableCell align="right">{invoice.total}</TableCell>
             <TableCell align="right">{invoice.dueDate}</TableCell>
             <TableCell align="right">{invoice.status}</TableCell>
