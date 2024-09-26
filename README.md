@@ -31,3 +31,4 @@ In order to follow the principle of avoiding over-design, the following features
 - The best animations.
 - Get data from database.
 - Pagination.
+- Commit linting.
