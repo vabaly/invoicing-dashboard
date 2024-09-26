@@ -1,7 +1,7 @@
-import { processInvoices } from './data';
+import { processInvoices } from '../business/data';
 import { api } from '~/trpc/server';
 
-export default async function fetchData() {
+const fetchData = async () => {
   const invoices = await api.invoice.getList();
   const clients = await api.client.getList();
 
@@ -11,4 +11,6 @@ export default async function fetchData() {
     invoices: invoicesWithClient,
     clients,
   };
-}
+};
+
+export default fetchData;

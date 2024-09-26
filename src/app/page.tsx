@@ -1,16 +1,14 @@
 import { HydrateClient } from '~/trpc/server';
 import { InvoiceList } from './_components/invoice-list';
-import fetchData from '~/business/fetch';
+import fetchData from '~/server/fetch';
+import HydrateAtom from './_components/hydrate-atom';
 
 export default async function Home() {
-  const { invoices, clients } = await fetchData();
-
-  console.log('invoices', invoices);
-  console.log('clients', clients);
-
+  const { invoices } = await fetchData();
   return (
     <HydrateClient>
       <InvoiceList invoices={invoices} />
+      <HydrateAtom invoices={invoices} />
     </HydrateClient>
   );
 }

@@ -24,6 +24,7 @@ export default function AppBreadcrumbs() {
         } else {
           return (
             <Link
+              underline="hover"
               component={NextLink}
               href={to}
               key={index}
