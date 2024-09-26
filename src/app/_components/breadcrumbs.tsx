@@ -11,7 +11,7 @@ export default function AppBreadcrumbs() {
   const pathNamesWithHome = [i18n.t('breadcrumbs.home'), ...pathNames];
 
   return (
-    <Breadcrumbs aria-label="breadcrumb">
+    <Breadcrumbs className="px-4" aria-label="breadcrumb">
       {pathNamesWithHome.map((pathName, index) => {
         const to = '/' + pathNamesWithHome.slice(1, index + 1).join('/');
         // The last breadcrumb is the current page, so it doesn't have a link

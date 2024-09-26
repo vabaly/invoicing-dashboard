@@ -7,20 +7,32 @@ import { LineItems } from './line-items';
 function InvoiceItem({
   title,
   text,
+  small,
 }: {
   title: string;
   text: string | number;
+  small?: boolean;
 }) {
   return (
-    <div className="flex items-center">
+    <div
+      className={classNames('md:flex md:items-center', {
+        'flex items-center': !small,
+      })}
+    >
       <Typography
         variant="subtitle1"
-        className="min-w-40 text-right text-gray-500"
+        className="text-gray-500 md:min-w-40 md:text-right"
       >
         {title}
         {i18n.t('colon')}
       </Typography>
-      <Typography className="pl-8">{text}</Typography>
+      <Typography
+        className={classNames('md:pl-8', {
+          'pl-2': !small,
+        })}
+      >
+        {text}
+      </Typography>
     </div>
   );
 }
@@ -32,7 +44,7 @@ interface InvoiceDetailProps extends InvoiceProps {
 export function InvoiceDetail({ invoice, small }: InvoiceDetailProps) {
   return (
     <div className="space-y-4">
-      <Typography className="pl-4" variant="h6">
+      <Typography className="md:pl-4" variant="h6">
         {i18n.t('invoiceDetail.basicInfo')}
       </Typography>
       <div
@@ -41,25 +53,29 @@ export function InvoiceDetail({ invoice, small }: InvoiceDetailProps) {
         })}
       >
         <InvoiceItem
+          small={small}
           title={i18n.t('invoiceTableHead.invoiceNumber')}
           text={invoice.invoiceNumber}
         />
         <InvoiceItem
+          small={small}
           title={i18n.t('invoiceTableHead.dueDate')}
           text={invoice.dueDate}
         />
         <InvoiceItem
+          small={small}
           title={i18n.t('invoiceTableHead.total')}
           text={invoice.total}
         />
         <InvoiceItem
+          small={small}
           title={i18n.t('invoiceTableHead.status')}
           text={invoice.status}
         />
       </div>
       {invoice.client ? (
         <>
-          <Typography className="pl-4 pt-4" variant="h6">
+          <Typography className="pt-4 md:pl-4" variant="h6">
             {i18n.t('invoiceDetail.clientInfo')}
           </Typography>
           <div
@@ -68,25 +84,29 @@ export function InvoiceDetail({ invoice, small }: InvoiceDetailProps) {
             })}
           >
             <InvoiceItem
+              small={small}
               title={i18n.t('invoiceDetail.clientId')}
               text={invoice.client.clientId}
             />
             <InvoiceItem
+              small={small}
               title={i18n.t('invoiceTableHead.clientName')}
               text={invoice.client.name}
             />
             <InvoiceItem
+              small={small}
               title={i18n.t('invoiceDetail.email')}
               text={invoice.client.email}
             />
             <InvoiceItem
+              small={small}
               title={i18n.t('invoiceDetail.address')}
               text={invoice.client.address}
             />
           </div>
         </>
       ) : null}
-      <Typography className="pl-4 pt-4" variant="h6">
+      <Typography className="pt-4 md:pl-4" variant="h6">
         {i18n.t('invoiceDetail.lineItems')}
       </Typography>
       <LineItems lineItems={invoice.lineItems} />

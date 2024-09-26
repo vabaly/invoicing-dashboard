@@ -3,6 +3,7 @@ import fetchData from '~/business/fetch';
 import { InvoiceDetail } from '../_components/invoice';
 import { Chase } from '../_components/chase';
 import { HydrateClient } from '~/trpc/server';
+import { FOOTER_HEIGHT, HEADER_HEIGHT, SPACING_HEIGHT } from '~/constants';
 
 export default async function InvoicePage({
   params: { invoice: invoiceNumber },
@@ -26,7 +27,13 @@ export default async function InvoicePage({
 
   return (
     <HydrateClient>
-      <div className="flex h-[calc(100vh-140px)] flex-col items-start space-y-4 pb-16">
+      <div
+        className="flex flex-col items-start space-y-4"
+        style={{
+          minHeight: `calc(100vh - ${HEADER_HEIGHT + FOOTER_HEIGHT + SPACING_HEIGHT}px)`,
+          paddingBottom: FOOTER_HEIGHT + SPACING_HEIGHT,
+        }}
+      >
         <Card className="w-full flex-1 p-4">
           <InvoiceDetail invoice={invoice} />
         </Card>

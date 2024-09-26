@@ -11,6 +11,7 @@ import { useState } from 'react';
 import i18n from '~/i18n';
 import { FakeEmail } from './email';
 import { type InvoiceProps } from '~/types';
+import { FOOTER_HEIGHT } from '~/constants';
 
 export function Chase(props: InvoiceProps) {
   const [isShowFakeEmail, setIsShowFakeEmail] = useState(false);
@@ -20,7 +21,10 @@ export function Chase(props: InvoiceProps) {
 
   return (
     <>
-      <div className="fixed bottom-0 left-0 right-0 flex h-16 items-center justify-end px-4">
+      <div
+        className="fixed bottom-0 left-0 right-0 flex items-center justify-end border-t bg-white px-4"
+        style={{ height: FOOTER_HEIGHT }}
+      >
         <Button
           size="large"
           variant="contained"

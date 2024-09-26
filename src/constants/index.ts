@@ -10,3 +10,7 @@ export const DEBOUNCE_PARAMS: [
     trailing: false,
   },
 ];
+
+export const HEADER_HEIGHT = 105;
+export const FOOTER_HEIGHT = 64;
+export const SPACING_HEIGHT = 16;

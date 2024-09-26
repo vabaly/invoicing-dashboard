@@ -4,10 +4,6 @@ const en = {
     description: 'Attelas invoicing dashboard',
   },
 
-  header: {
-    title: 'Invoicing dashboard',
-  },
-
   breadcrumbs: {
     home: 'Invoices',
   },
