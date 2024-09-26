@@ -1,4 +1,4 @@
-import { api, HydrateClient } from '~/trpc/server';
+import { HydrateClient } from '~/trpc/server';
 import { InvoiceList } from './_components/invoice-list';
 import fetchData from '~/business/fetch';
 

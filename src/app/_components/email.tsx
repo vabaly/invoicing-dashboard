@@ -24,15 +24,19 @@ export function FakeEmail({ invoice }: InvoiceProps) {
         </Typography>
         <Typography variant="body2">{i18n.t('email.subjectValue')}</Typography>
       </div>
-      <div className="max-h-[450px] space-y-2 p-4 overflow-auto">
+      <div className="max-h-[450px] space-y-2 overflow-auto p-4">
         <Typography variant="body1">
           {i18n.t('email.bodies.0', { name: invoice.client?.name ?? 'user' })}
         </Typography>
-        <Typography className="pb-2" variant="body1">{i18n.t('email.bodies.1')}</Typography>
+        <Typography className="pb-2" variant="body1">
+          {i18n.t('email.bodies.1')}
+        </Typography>
         <Divider />
         <InvoiceDetail small invoice={invoice} />
         <Divider />
-        <Typography className="pt-2" variant="body1">{i18n.t('email.bodies.2')}</Typography>
+        <Typography className="pt-2" variant="body1">
+          {i18n.t('email.bodies.2')}
+        </Typography>
         <Typography variant="body1">{i18n.t('email.bodies.3')}</Typography>
       </div>
     </div>

@@ -1,7 +1,5 @@
-import { Button, Card } from '@mui/material';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
+import { Card } from '@mui/material';
 import fetchData from '~/business/fetch';
-import i18n from '~/i18n';
 import { InvoiceDetail } from '../_components/invoice';
 import { Chase } from '../_components/chase';
 import { HydrateClient } from '~/trpc/server';
@@ -28,10 +26,7 @@ export default async function InvoicePage({
 
   return (
     <HydrateClient>
-      <div className="flex h-[calc(100vh-100px)] flex-col items-start space-y-4 pb-16">
-        <Button startIcon={<ArrowBackIcon />} color="inherit" aria-label="back">
-          {i18n.t('back')}
-        </Button>
+      <div className="flex h-[calc(100vh-140px)] flex-col items-start space-y-4 pb-16">
         <Card className="w-full flex-1 p-4">
           <InvoiceDetail invoice={invoice} />
         </Card>

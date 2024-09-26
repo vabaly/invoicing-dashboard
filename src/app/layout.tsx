@@ -7,6 +7,7 @@ import { TRPCReactProvider } from '~/trpc/react';
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import i18n from '~/i18n';
 import { Header } from './_components/header';
+import AppBreadcrumbs from './_components/breadcrumbs';
 
 export const metadata: Metadata = {
   title: i18n.t('siteInfo.title'),
@@ -23,7 +24,10 @@ export default function RootLayout({
         <TRPCReactProvider>
           <AppRouterCacheProvider>
             <Header />
-            <main className="p-4 pt-20">{children}</main>
+            <main className="space-y-4 p-4 pt-20">
+              <AppBreadcrumbs />
+              {children}
+            </main>
           </AppRouterCacheProvider>
         </TRPCReactProvider>
       </body>

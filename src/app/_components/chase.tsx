@@ -21,7 +21,12 @@ export function Chase(props: InvoiceProps) {
   return (
     <>
       <div className="fixed bottom-0 left-0 right-0 flex h-16 items-center justify-end px-4">
-        <Button variant="contained" color="primary" onClick={showFakeEmail}>
+        <Button
+          size="large"
+          variant="contained"
+          color="primary"
+          onClick={showFakeEmail}
+        >
           {i18n.t('chase')}
         </Button>
       </div>
@@ -32,7 +37,9 @@ export function Chase(props: InvoiceProps) {
           <FakeEmail {...props} />
         </DialogContent>
         <DialogActions className="mx-4 mb-4">
-          <Button variant="contained" onClick={hideFakeEmail}>{i18n.t('ok')}</Button>
+          <Button variant="contained" onClick={hideFakeEmail}>
+            {i18n.t('ok')}
+          </Button>
         </DialogActions>
       </Dialog>
     </>

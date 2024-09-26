@@ -8,6 +8,10 @@ const en = {
     title: 'Invoicing dashboard',
   },
 
+  breadcrumbs: {
+    home: 'Invoices',
+  },
+
   invoiceTableHead: {
     invoiceNumber: 'Invoice Number',
     clientName: 'Client Name',
