@@ -34,7 +34,7 @@ export default function InvoicePage() {
     }
   }, [invoicesWithoutClient, clients, setInvoices]);
 
-  if (invoices && !invoice) {
+  if (invoices.length && !invoice) {
     return (
       <div className="fixed left-[50%] top-[50%] translate-x-[-50%] translate-y-[-50%]">
         Invoice not found
