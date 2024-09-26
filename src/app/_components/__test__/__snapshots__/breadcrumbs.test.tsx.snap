@@ -1,0 +1,70 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`AppBreadcrumbs should render the breadcrumbs correctly 1`] = `
+<nav
+  aria-label="breadcrumb"
+  class="MuiTypography-root MuiTypography-body1 MuiBreadcrumbs-root px-4 css-8yvas4-MuiTypography-root-MuiBreadcrumbs-root"
+>
+  <ol
+    class="MuiBreadcrumbs-ol css-4pdmu4-MuiBreadcrumbs-ol"
+  >
+    <li
+      class="MuiBreadcrumbs-li"
+    >
+      <a
+        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-1fxco1w-MuiTypography-root-MuiLink-root"
+        href="/"
+      >
+        Invoices
+      </a>
+    </li>
+    <li
+      aria-hidden="true"
+      class="MuiBreadcrumbs-separator css-1wuw8dw-MuiBreadcrumbs-separator"
+    >
+      /
+    </li>
+    <li
+      class="MuiBreadcrumbs-li"
+    >
+      <a
+        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-1fxco1w-MuiTypography-root-MuiLink-root"
+        href="/path"
+      >
+        path
+      </a>
+    </li>
+    <li
+      aria-hidden="true"
+      class="MuiBreadcrumbs-separator css-1wuw8dw-MuiBreadcrumbs-separator"
+    >
+      /
+    </li>
+    <li
+      class="MuiBreadcrumbs-li"
+    >
+      <a
+        class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineHover css-1fxco1w-MuiTypography-root-MuiLink-root"
+        href="/path/path segment 1"
+      >
+        path segment 1
+      </a>
+    </li>
+    <li
+      aria-hidden="true"
+      class="MuiBreadcrumbs-separator css-1wuw8dw-MuiBreadcrumbs-separator"
+    >
+      /
+    </li>
+    <li
+      class="MuiBreadcrumbs-li"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body1 css-1f6v1q3-MuiTypography-root"
+      >
+        path segment 2
+      </p>
+    </li>
+  </ol>
+</nav>
+`;

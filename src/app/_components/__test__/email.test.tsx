@@ -27,13 +27,17 @@ describe('FakeEmail', () => {
   });
 
   test('should render when client is present', () => {
-    render(<FakeEmail {...invoiceProps} />);
+    const { asFragment } = render(<FakeEmail {...invoiceProps} />);
+
+    // Snapshot test
+    expect(asFragment().children[0]).toMatchSnapshot();
 
     expect(screen.getByText(i18n.t('email.to'))).toBeInTheDocument();
     if (invoiceProps.invoice.client?.email) {
-      expect(
-        screen.getByText(invoiceProps.invoice.client.email),
-      ).toBeInTheDocument();
+      const texts = screen.getAllByText(invoiceProps.invoice.client.email);
+      expect(texts.length).toBe(2);
+      // Pick one to valid
+      expect(texts[0]).toBeInTheDocument();
     }
     expect(screen.getByText(i18n.t('email.subject'))).toBeInTheDocument();
     expect(screen.getByText(i18n.t('email.subjectValue'))).toBeInTheDocument();

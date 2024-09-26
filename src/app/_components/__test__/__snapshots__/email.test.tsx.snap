@@ -1,0 +1,242 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FakeEmail should render when client is present 1`] = `
+<div
+  class="w-full border px-4 md:w-[500px]"
+>
+  <div
+    class="flex items-center space-x-2 border-b p-4"
+  >
+    <p
+      class="MuiTypography-root MuiTypography-body2 min-w-14 text-gray-500 css-1nmqws6-MuiTypography-root"
+    >
+      To
+    </p>
+    <div
+      class="MuiChip-root MuiChip-filled MuiChip-sizeSmall MuiChip-colorDefault MuiChip-filledDefault css-14tabw5-MuiChip-root"
+    >
+      <span
+        class="MuiChip-label MuiChip-labelSmall css-3fh3fk-MuiChip-label"
+      >
+        test@example.com
+      </span>
+    </div>
+  </div>
+  <div
+    class="flex items-center space-x-2 border-b p-4"
+  >
+    <p
+      class="MuiTypography-root MuiTypography-body2 min-w-14 text-gray-500 css-1nmqws6-MuiTypography-root"
+    >
+      Subject
+    </p>
+    <p
+      class="MuiTypography-root MuiTypography-body2 css-1nmqws6-MuiTypography-root"
+    >
+      Please check your invoice
+    </p>
+  </div>
+  <div
+    class="max-h-[350px] space-y-2 overflow-auto p-4 md:max-h-[450px]"
+  >
+    <p
+      class="MuiTypography-root MuiTypography-body1 css-1edfpdg-MuiTypography-root"
+    >
+      Dear Test User,
+    </p>
+    <p
+      class="MuiTypography-root MuiTypography-body1 pb-2 css-1edfpdg-MuiTypography-root"
+    >
+      This is your invoice details. Please check it.
+    </p>
+    <hr
+      class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+    />
+    <div
+      class="space-y-4"
+    >
+      <h6
+        class="MuiTypography-root MuiTypography-h6 md:pl-4 css-8zgow4-MuiTypography-root"
+      >
+        Basic Info
+      </h6>
+      <div
+        class="grid grid-cols-1 gap-4"
+      >
+        <div
+          class="md:flex md:items-center"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle1 text-gray-500 md:min-w-40 md:text-right css-1ixrkmk-MuiTypography-root"
+          >
+            Invoice Number: 
+          </h6>
+          <p
+            class="MuiTypography-root MuiTypography-body1 md:pl-8 css-1edfpdg-MuiTypography-root"
+          >
+            12345
+          </p>
+        </div>
+        <div
+          class="md:flex md:items-center"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle1 text-gray-500 md:min-w-40 md:text-right css-1ixrkmk-MuiTypography-root"
+          >
+            Due Date: 
+          </h6>
+          <p
+            class="MuiTypography-root MuiTypography-body1 md:pl-8 css-1edfpdg-MuiTypography-root"
+          >
+            test
+          </p>
+        </div>
+        <div
+          class="md:flex md:items-center"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle1 text-gray-500 md:min-w-40 md:text-right css-1ixrkmk-MuiTypography-root"
+          >
+            Total Amount Due: 
+          </h6>
+          <p
+            class="MuiTypography-root MuiTypography-body1 md:pl-8 css-1edfpdg-MuiTypography-root"
+          >
+            100
+          </p>
+        </div>
+        <div
+          class="md:flex md:items-center"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle1 text-gray-500 md:min-w-40 md:text-right css-1ixrkmk-MuiTypography-root"
+          >
+            Status: 
+          </h6>
+          <p
+            class="MuiTypography-root MuiTypography-body1 md:pl-8 css-1edfpdg-MuiTypography-root"
+          >
+            pending
+          </p>
+        </div>
+      </div>
+      <h6
+        class="MuiTypography-root MuiTypography-h6 pt-4 md:pl-4 css-8zgow4-MuiTypography-root"
+      >
+        Client Info
+      </h6>
+      <div
+        class="grid grid-cols-1 gap-4"
+      >
+        <div
+          class="md:flex md:items-center"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle1 text-gray-500 md:min-w-40 md:text-right css-1ixrkmk-MuiTypography-root"
+          >
+            Client ID: 
+          </h6>
+          <p
+            class="MuiTypography-root MuiTypography-body1 md:pl-8 css-1edfpdg-MuiTypography-root"
+          >
+            test
+          </p>
+        </div>
+        <div
+          class="md:flex md:items-center"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle1 text-gray-500 md:min-w-40 md:text-right css-1ixrkmk-MuiTypography-root"
+          >
+            Client Name: 
+          </h6>
+          <p
+            class="MuiTypography-root MuiTypography-body1 md:pl-8 css-1edfpdg-MuiTypography-root"
+          >
+            Test User
+          </p>
+        </div>
+        <div
+          class="md:flex md:items-center"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle1 text-gray-500 md:min-w-40 md:text-right css-1ixrkmk-MuiTypography-root"
+          >
+            Email: 
+          </h6>
+          <p
+            class="MuiTypography-root MuiTypography-body1 md:pl-8 css-1edfpdg-MuiTypography-root"
+          >
+            test@example.com
+          </p>
+        </div>
+        <div
+          class="md:flex md:items-center"
+        >
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle1 text-gray-500 md:min-w-40 md:text-right css-1ixrkmk-MuiTypography-root"
+          >
+            Address: 
+          </h6>
+          <p
+            class="MuiTypography-root MuiTypography-body1 md:pl-8 css-1edfpdg-MuiTypography-root"
+          >
+            123 Main St
+          </p>
+        </div>
+      </div>
+      <h6
+        class="MuiTypography-root MuiTypography-h6 pt-4 md:pl-4 css-8zgow4-MuiTypography-root"
+      >
+        Line Items
+      </h6>
+      <table
+        class="MuiTable-root max-w-[500px] css-rqglhn-MuiTable-root"
+      >
+        <thead
+          class="MuiTableHead-root css-15wwp11-MuiTableHead-root"
+        >
+          <tr
+            class="MuiTableRow-root MuiTableRow-head css-1q1u3t4-MuiTableRow-root"
+          >
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-sizeMedium css-1t7lzbz-MuiTableCell-root"
+              scope="col"
+            >
+              Description
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignRight MuiTableCell-sizeMedium css-g2aoha-MuiTableCell-root"
+              scope="col"
+            >
+              Price
+            </th>
+            <th
+              class="MuiTableCell-root MuiTableCell-head MuiTableCell-alignRight MuiTableCell-sizeMedium css-g2aoha-MuiTableCell-root"
+              scope="col"
+            >
+              Quantity
+            </th>
+          </tr>
+        </thead>
+        <tbody
+          class="MuiTableBody-root css-apqrd9-MuiTableBody-root"
+        />
+      </table>
+    </div>
+    <hr
+      class="MuiDivider-root MuiDivider-fullWidth css-9mgopn-MuiDivider-root"
+    />
+    <p
+      class="MuiTypography-root MuiTypography-body1 pt-2 css-1edfpdg-MuiTypography-root"
+    >
+      Best regards,
+    </p>
+    <p
+      class="MuiTypography-root MuiTypography-body1 css-1edfpdg-MuiTypography-root"
+    >
+      Attelas Team
+    </p>
+  </div>
+</div>
+`;
