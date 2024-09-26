@@ -4,7 +4,7 @@ export const DEBOUNCE_PARAMS: [
   Parameters<typeof debounce>[1],
   Parameters<typeof debounce>[2],
 ] = [
-  3000,
+  300,
   {
     leading: true,
     trailing: false,
