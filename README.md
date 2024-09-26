@@ -17,9 +17,12 @@ To get started with the Invoicing Dashboard, follow these steps:
 - i18n-js: To internationalize the site.
 - Jest: To write tests.
 
-## UX design
+## UX/UI design
 
-[Excalidraw](https://excalidraw.com/#room=a0be4bc704a784b75250,OPUSCK9wMd_kHUW-u_-vfg)
+- [Excalidraw](https://excalidraw.com/#room=a0be4bc704a784b75250,OPUSCK9wMd_kHUW-u_-vfg).
+- Use Attelas official website fonts.
+- Use Attelas official website colors.
+- Use Attelas logo.
 
 ## Missing features
 
@@ -27,3 +30,4 @@ In order to follow the principle of avoiding over-design, the following features
 
 - The best animations.
 - Get data from database.
+- Pagination.
