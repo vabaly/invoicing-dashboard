@@ -55,7 +55,7 @@ export default function RootLayout({
             <ThemeProvider theme={theme}>
               <Header />
               <main
-                className="space-y-4 p-4"
+                className="space-y-4 overflow-hidden overflow-x-auto p-4"
                 style={{ paddingTop: HEADER_HEIGHT }}
               >
                 {children}
