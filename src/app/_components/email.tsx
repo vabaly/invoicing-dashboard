@@ -1,7 +1,9 @@
 import { Chip, Divider, Typography } from '@mui/material';
 import i18n from '~/i18n';
 import { type InvoiceProps } from '~/types';
-import { InvoiceDetail } from './invoice';
+import { InvoiceItem } from './invoice';
+import { addCommasToNumber } from '~/utils';
+// import { InvoiceDetail } from './invoice';
 
 export function FakeEmail({ invoice }: InvoiceProps) {
   const { client } = invoice;
@@ -32,7 +34,22 @@ export function FakeEmail({ invoice }: InvoiceProps) {
           {i18n.t('email.bodies.1')}
         </Typography>
         <Divider />
-        <InvoiceDetail small invoice={invoice} />
+        {/* <InvoiceDetail small invoice={invoice} /> */}
+        <InvoiceItem
+          small
+          title={i18n.t('invoiceTableHead.invoiceNumber')}
+          text={invoice.invoiceNumber}
+        />
+        <InvoiceItem
+          small
+          title={i18n.t('invoiceTableHead.total')}
+          text={addCommasToNumber(invoice.total)}
+        />
+        <InvoiceItem
+          small
+          title={i18n.t('invoiceTableHead.dueDate')}
+          text={invoice.dueDate}
+        />
         <Divider />
         <Typography className="pt-2" variant="body1">
           {i18n.t('email.bodies.2')}

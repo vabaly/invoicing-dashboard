@@ -35,8 +35,7 @@ describe('FakeEmail', () => {
     expect(screen.getByText(i18n.t('email.to'))).toBeInTheDocument();
     if (invoiceProps.invoice.client?.email) {
       const texts = screen.getAllByText(invoiceProps.invoice.client.email);
-      expect(texts.length).toBe(2);
-      // Pick one to valid
+      expect(texts.length).toBe(1);
       expect(texts[0]).toBeInTheDocument();
     }
     expect(screen.getByText(i18n.t('email.subject'))).toBeInTheDocument();

@@ -45,7 +45,7 @@ const en = {
     subjectValue: 'Please check your invoice',
     bodies: {
       0: 'Dear %{name},',
-      1: 'This is your invoice details. Please check it.',
+      1: 'This is your invoice details. Please pay it as soon as you can.',
       2: 'Best regards,',
       3: 'Attelas Team',
     },

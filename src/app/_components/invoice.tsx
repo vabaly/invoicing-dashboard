@@ -5,7 +5,7 @@ import { type InvoiceProps } from '~/types';
 import { LineItems } from './line-items';
 import { addCommasToNumber } from '~/utils';
 
-function InvoiceItem({
+export function InvoiceItem({
   title,
   text,
   small,
