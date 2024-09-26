@@ -3,6 +3,7 @@ import i18n from '~/i18n';
 import classNames from 'classnames';
 import { type InvoiceProps } from '~/types';
 import { LineItems } from './line-items';
+import { addCommasToNumber } from '~/utils';
 
 function InvoiceItem({
   title,
@@ -65,7 +66,7 @@ export function InvoiceDetail({ invoice, small }: InvoiceDetailProps) {
         <InvoiceItem
           small={small}
           title={i18n.t('invoiceTableHead.total')}
-          text={invoice.total}
+          text={addCommasToNumber(invoice.total)}
         />
         <InvoiceItem
           small={small}

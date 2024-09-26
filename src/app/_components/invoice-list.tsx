@@ -9,6 +9,7 @@ import { type InvoiceWithClient } from '~/business';
 import i18n from '~/i18n';
 import './invoice-list.css';
 import InvoiceRow from './invoice-row';
+import { addCommasToNumber } from '~/utils';
 
 interface InvoiceListProps {
   invoices: InvoiceWithClient[];
@@ -50,7 +51,9 @@ export function InvoiceList({ invoices }: InvoiceListProps) {
             <TableCell align="right">
               {invoice.client?.name ?? 'Unknown'}
             </TableCell>
-            <TableCell align="right">{invoice.total}</TableCell>
+            <TableCell align="right">
+              {addCommasToNumber(invoice.total)}
+            </TableCell>
             <TableCell align="right">{invoice.dueDate}</TableCell>
             <TableCell align="right">{invoice.status}</TableCell>
           </InvoiceRow>

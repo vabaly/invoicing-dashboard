@@ -4,6 +4,7 @@ import { render, screen } from '@testing-library/react';
 import { InvoiceList } from '../invoice-list';
 import i18n from '~/i18n';
 import { invoices } from './__mock__';
+import { addCommasToNumber } from '~/utils';
 
 jest.mock('next/navigation', () => ({
   useRouter() {
@@ -44,7 +45,7 @@ describe('InvoiceList', () => {
       if (cells?.length) {
         expect(cells[0]?.textContent).toBe(invoice.invoiceNumber);
         expect(cells[1]?.textContent).toBe(invoice.client.name);
-        expect(cells[2]?.textContent).toBe(invoice.total.toString());
+        expect(cells[2]?.textContent).toBe(addCommasToNumber(invoice.total));
         expect(cells[3]?.textContent).toBe(invoice.dueDate);
         expect(cells[4]?.textContent).toBe(invoice.status);
       }

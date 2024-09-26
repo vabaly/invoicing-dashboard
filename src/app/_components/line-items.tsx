@@ -7,6 +7,7 @@ import {
 } from '@mui/material';
 import { type InvoiceWithClient } from '~/business';
 import i18n from '~/i18n';
+import { addCommasToNumber } from '~/utils';
 
 export function LineItems({
   lineItems,
@@ -37,7 +38,9 @@ export function LineItems({
             <TableCell component="th" scope="row">
               {lineItem.description}
             </TableCell>
-            <TableCell align="right">{lineItem.price}</TableCell>
+            <TableCell align="right">
+              {addCommasToNumber(lineItem.price)}
+            </TableCell>
             <TableCell align="right">{lineItem.quantity}</TableCell>
           </TableRow>
         ))}
