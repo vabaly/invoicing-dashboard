@@ -34,8 +34,10 @@ describe('processInvoices', () => {
 
     expect(processedInvoices).toHaveLength(1);
     expect(processedInvoices[0]).toBeTruthy();
+    if (processedInvoices[0]?.client) {
+      expect(processedInvoices[0].client?.name).toEqual('John Doe');
+    }
     if (processedInvoices[0]) {
-      expect(processedInvoices[0].clientName).toEqual('John Doe');
       expect(processedInvoices[0].total).toEqual(20);
     }
   });
