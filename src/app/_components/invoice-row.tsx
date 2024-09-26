@@ -25,7 +25,7 @@ export default function InvoiceRow({
 
   return (
     <TableRow
-      className="cursor-pointer"
+      className="cursor-pointer hover:bg-gray-100"
       // Style for the last row to remove the border
       sx={{ '&:last-child td, &:last-child th': { border: 0 } }}
       onClick={() => handleRowClick(invoice.invoiceNumber)}
