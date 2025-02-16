@@ -15,9 +15,14 @@ import { FOOTER_HEIGHT } from '~/constants';
 
 export function Chase(props: InvoiceProps) {
   const [isShowFakeEmail, setIsShowFakeEmail] = useState(false);
+  const { invoice } = props;
 
   const hideFakeEmail = () => setIsShowFakeEmail(false);
   const showFakeEmail = () => setIsShowFakeEmail(true);
+
+  if (['paid', 'pending'].includes(invoice.status.toLocaleLowerCase())) {
+    return null;
+  }
 
   return (
     <>
